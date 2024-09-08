@@ -4,7 +4,7 @@ function calc(op){
     let res = 0;
 
     if (isNaN(n1) || isNaN(n2)){
-        alert('algo está errado, revise');
+        alert('Algo está errado, conserte.');
 
     }else{
         if (op == '+'){
@@ -15,9 +15,14 @@ function calc(op){
             res = n1 * n2;            
         }else if (op == '/'){
             res = n1 / n2;            
+        }else if (op == '%'){
+            res = n1 / 100 * n2;        
+        }else if (op == '^'){
+            res = n1 ** n2;  
         }
+        
 
-        document.getElementById('result').textContent = res;
+        document.getElementById('result').textContent = 'resultado:' + res;
 
     }
 
